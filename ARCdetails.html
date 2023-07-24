@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTI-RAGGING</title>
+    <link rel="icon" type="image/x-icon" href="/Screenshot 2023-05-07 130739.png">
+    <style>
+          #ARCform{
+        background-color: black;
+         padding: 100px;
+         width:auto;
+         font-family:Arial, Helvetica, sans-serif;
+         font-size: 20px;
+         /* adding css to background image */
+         /* background-image: url(/images.jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; */
+        height: 100%;  
+        
+        }
+    #heading1{
+      color: white;
+      word-spacing: 5px;
+      letter-spacing: 1.5px;
+      border: none;
+      border-bottom: 2px solid #F0131E;
+      border-bottom-width: 3px;
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding-bottom: 10px;
+      text-align: center;
+
+        }
+input[type=text],input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1.7px solid black;
+    padding-bottom: 8px;
+    background-color: lightyellow;
+    }
+
+input[type=date] {
+  width: fit-content;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1px solid black;
+  cursor: pointer;
+}
+input[type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1.7px solid black;
+  background-color: lightyellow;
+}
+button[type=button] {
+  
+  padding: 8px 20px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: lightyellow;
+  cursor: pointer;
+}
+input[type=reset] {
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color:black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+ float: left;
+}
+input[type=submit] {
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color:royalblue;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+}
+
+
+select {
+  width: fit-content;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+.inside_form{
+    background-color: white;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    padding: 0px 80px 80px 40px;
+   
+}
+center >h3{
+  border: none;
+      border-bottom: 2px solid black;
+      border-bottom-width: 3px;
+      padding-bottom: 10px;
+      width: fit-content;
+}
+    </style>
+
+<body>
+    <form id="ARCform" action="Arc.jsp" method="post">
+        <h3 id="heading1">ANTI RAGGING COMMITTEE</h3><br>
+        <div class="inside_form">
+          <center><h3>ADD DETAILS</h3></center>
+          <br>
+            <label>Anti-Ragging Committee ID:</label>
+            <input type="text" placeholder="Enter ARC Id..." name="Arcid" id="arc"><br>
+            <br>
+            <label>College ID:</label>
+            <input type="text" placeholder="Enter College Id..." name="clgid" id="clg"><br>
+            <br>
+            <label>E-mail:</label>
+            <input type="email" placeholder="Enter Email Id..." name="email" id="mails"><br>
+            <br>
+            <label>Established Date:</label>
+            <input type="date" name="established" id="date"><br>
+            <br>
+            <label>Chairman:</label>
+            <input type="text" placeholder="Enter Chairman Name..." name="chairman" id="man"><br>
+            <br>
+            <label>Mobile:</label>
+            <input type="tel" pattern="[0-9]{10}" name="mobile" id="phone"><br>
+            <br>
+            <label for="memberName">Member Name1:</label>
+            <input type="text" id="memberName" placeholder="Enter Member Name..." name="memone"><br>
+            <br>
+            <label for="designationSelect">Member Designation1:</label>
+            <input type="text" id="designation" placeholder="Enter Designation..." name="desone"><br>
+            <br>
+            <label for="memberName">Member Name2:</label>
+            <input type="text" id="memberName2" placeholder="Enter Member Name..." name="memtwo"><br>
+            <br>
+            <label for="designationSelect"> Member Designation2:</label>
+            <input type="text" id="designation2" placeholder="Enter Designation..." name="destwo"><br>
+             <!-- <select id="designationSelect">
+                <option value="">Select</option>
+                <option value="1">Dean</option>
+                <option value="2">Faculty</option>
+            </select><br>  -->
+            <br><br>
+
+            <input type="reset">
+
+            <input type="submit" value="submit">
+            
+        </div>  
+    </form>
+    <script>
+      document.getElementById("ARCform").addEventListener("submit", function(event) {
+     event.preventDefault(); // Prevent form submission
+
+     var arcId = document.getElementById("arc").value;
+            var collegeId = document.getElementById("clg").value;
+            var email = document.getElementById("mails").value;
+            var establishedDate = document.getElementById("date").value;
+            var chairman = document.getElementById("man").value;
+            var mobile = document.getElementById("phone").value;
+            var memberName1 = document.getElementById("memberName").value;
+            var designation1 = document.getElementById("designation").value;
+            var memberName2 = document.getElementById("memberName2").value;
+            var designation2 = document.getElementById("designation2").value;
+
+            // Add validation logic here
+
+            if (arcId === "") {
+                alert("Please enter ARC ID.");
+                return false;
+            }
+
+            if (collegeId === "") {
+                alert("Please enter College ID.");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Please enter Email.");
+                return false;
+            }
+
+            if (establishedDate === "") {
+                alert("Please select Established Date.");
+                return false;
+            }
+
+            if (chairman === "") {
+                alert("Please enter Chairman Name.");
+                return false;
+            }
+
+            if (mobile === "") {
+                alert("Please enter Mobile.");
+                return false;
+            }
+
+            if (memberName1 === "") {
+                alert("Please enter Membername.");
+                return false;
+            }
+
+            if (designation1 === "") {
+                alert("Please enter Designation.");
+                return false;
+            }
+
+            if (memberName2 === "") {
+                alert("Please enter Membername.");
+                return false;
+            }
+            if (designation2 === "") {
+                alert("Please enter Designation.");
+                return false;
+            }
+
+
+alert('Form submitted successfully');
+document.getElementById("ARCform").reset();
+window.location.replace("code4.html");
+
+});
+</script>
+</body>
+</html>

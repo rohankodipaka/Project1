@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTI-RAGGING</title>
+    <link rel="icon" type="image/x-icon" href="/Screenshot 2023-05-07 130739.png">
+    <style>
+        #CLGform{
+          background-color: black;
+       padding: 100px;
+       width:auto;
+       color: black;
+       font-family:Arial, Helvetica, sans-serif;
+       font-size: 18px;
+      
+      }
+  #heading1{
+    color: white;
+    word-spacing: 5px;
+    letter-spacing: 1.5px;
+    border: none;
+    border-bottom: 2px solid #F0131E;
+    border-bottom-width: 3px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+
+      }
+input[type=text],input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1.7px solid black;
+  padding-bottom: 8px;
+  background-color: lightyellow;
+  }
+
+input[type=date] {
+width: fit-content;
+padding: 12px 20px;
+margin: 10px 0;
+border: 1px solid black;
+cursor: pointer;
+}
+input[type=tel] {
+width: 100%;
+padding: 12px 20px;
+margin: 10px 0;
+border: 1.7px solid black;
+background-color: lightyellow;
+}
+button[type=button] {
+
+padding: 8px 20px;
+margin: 20px 0;
+box-sizing: border-box;
+border: 1px solid black;
+background-color: lightyellow;
+cursor: pointer;
+}
+input[type=reset] {
+box-sizing: border-box;
+border: 1px solid black;
+background-color:black;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+cursor: pointer;
+float: left;
+}
+input[type=submit] {
+box-sizing: border-box;
+border: 1px solid black;
+background-color:royalblue;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+cursor: pointer;
+float: right;
+}
+
+
+select {
+width: fit-content;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+background-color: #f1f1f1;
+}
+.inside_form{
+  background-color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  padding: 0px 80px 80px 40px;
+ 
+}
+center >h3{
+border: none;
+    border-bottom: 2px solid black;
+    border-bottom-width: 3px;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+  </style>
+</head>
+<body>
+    <form action="college.jsp" id="CLGform" method="post">
+        <h3 id="heading1">COLLEGE DETAILS</h3><br>
+        <div class="inside_form">
+            <center><h3>ADD DETAILS</h3></center>
+            <br>
+            <label>College ID: </label>
+            <br>
+            <input type="text" name="id" placeholder="Enter College ID">
+            <br><br>
+            <label>College Name : </label>
+            <select name="college" id="inputcollege">
+                <option value="selectcollege">Select College</option>
+                <option value="CITS">Chaitanya Institute Of Technology And Science</option>
+                <option value="KU">KU college Of Engineering And Technology</option>
+                <option value="KITS">Kakatiya Institute Of Technology And Science</option>
+            </select>
+            <br><br>
+                          <label for="inputState">State</label>
+                          <select class="form-control" name="state" id="inputState">
+                                              <option value="SelectState">Select State</option>
+                                              <option value="Andra Pradesh">Andra Pradesh</option>
+                                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                              <option value="Assam">Assam</option>
+                                              <option value="Bihar">Bihar</option>
+                                              <option value="Chhattisgarh">Chhattisgarh</option>
+                                              <option value="Goa">Goa</option>
+                                              <option value="Gujarat">Gujarat</option>
+                                              <option value="Haryana">Haryana</option>
+                                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                              <option value="Jharkhand">Jharkhand</option>
+                                              <option value="Karnataka">Karnataka</option>
+                                              <option value="Kerala">Kerala</option>
+                                              <option value="Madya Pradesh">Madya Pradesh</option>
+                                              <option value="Maharashtra">Maharashtra</option>
+                                              <option value="Manipur">Manipur</option>
+                                              <option value="Meghalaya">Meghalaya</option>
+                                              <option value="Mizoram">Mizoram</option>
+                                              <option value="Nagaland">Nagaland</option>
+                                              <option value="Orissa">Orissa</option>
+                                              <option value="Punjab">Punjab</option>
+                                              <option value="Rajasthan">Rajasthan</option>
+                                              <option value="Sikkim">Sikkim</option>
+                                              <option value="Tamil Nadu">Tamil Nadu</option>
+                                              <option value="Telangana">Telangana</option>
+                                              <option value="Tripura">Tripura</option>
+                                              <option value="Uttaranchal">Uttaranchal</option>
+                                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                              <option value="West Bengal">West Bengal</option>
+                                              
+                                            </select>
+                                            <br><br>
+                                            <label>Email : </label>
+                                            <br>
+                    <input type="email" name="email" placeholder="Enter Your Valid Email">
+                    <br><br>
+                    <br>
+                    <label>Address :</label>
+                    <br><br>
+                    <textarea  cols="70" rows="5" name="address"></textarea>
+                    <br><br>
+                    <input type="reset">
+
+                    <input type="submit" value="Submit">
+        </div>
+    </form>
+
+      <script>
+
+      document.getElementById('CLGform').addEventListener('submit', function(event) {
+         event.preventDefault();
+
+
+        var id = document.forms["CLGform"]["id"].value;
+        var college = document.forms["CLGform"]["college"].value;
+        var state = document.forms["CLGform"]["state"].value;
+        var email = document.forms["CLGform"]["email"].value;
+        var address = document.forms["CLGform"]["address"].value;
+        
+        if (id === "") {
+            alert("Please enter a College ID");
+            return false;
+        }
+        
+        if (college === "selectcollege") {
+            alert("Please select a College");
+            return false;
+        }
+        
+        if (state === "SelectState") {
+            alert("Please select a State");
+            return false;
+        }
+        
+        if (email === "") {
+            alert("Please enter an Email");
+            return false;
+        }
+        
+        if (address === "") {
+            alert("Please enter an Address");
+            return false;
+        }
+
+   alert('Form submitted successfully');
+  //document.getElementById('CLGform').reset();
+  //window.location.replace("code4.html");
+  
+  document.forms[0].action = "college.jsp";
+  document.forms[0].method = "post"; // "get"
+  document.forms[0].submit();
+
+});
+</script>
+
+
+</body>
+</html>

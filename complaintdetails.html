@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTI-RAGGING</title>
+    <link rel="icon" type="image/x-icon" href="/Screenshot 2023-05-07 130739.png">
+    <style>
+        #COMPform{
+       background-color: black;
+       padding: 100px;
+       width:auto;
+       color: black;
+       font-family:Arial, Helvetica, sans-serif;
+       font-size: 18px;
+      
+      }
+  #heading1{
+    color: white;
+    word-spacing: 5px;
+    letter-spacing: 1.5px;
+    border: none;
+    border-bottom: 2px solid #F0131E;
+    border-bottom-width: 3px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+
+      }
+input[type=text],input[type=email],input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1.7px solid black;
+  padding-bottom: 8px;
+  background-color: lightyellow;
+  }
+
+input[type=date] {
+width: fit-content;
+padding: 12px 20px;
+margin: 10px 0;
+border: 1px solid black;
+cursor: pointer;
+}
+input[type=tel] {
+width: 100%;
+padding: 12px 20px;
+margin: 10px 0;
+border: 1.7px solid black;
+background-color: lightyellow;
+}
+button[type=button] {
+
+padding: 8px 20px;
+margin: 20px 0;
+box-sizing: border-box;
+border: 1px solid black;
+background-color: lightyellow;
+cursor: pointer;
+}
+input[type=reset] {
+box-sizing: border-box;
+border: 1px solid black;
+background-color:black;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+cursor: pointer;
+float: left;
+}
+input[type=submit] {
+box-sizing: border-box;
+border: 1px solid black;
+background-color:royalblue;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+cursor: pointer;
+float: right;
+}
+
+
+select {
+width: fit-content;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+background-color: #f1f1f1;
+}
+.inside_form{
+  background-color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  padding: 0px 80px 80px 40px;
+ 
+}
+center >h3{
+border: none;
+    border-bottom: 2px solid black;
+    border-bottom-width: 3px;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+  </style>
+</head>
+<body>
+    <form id="COMPform" action="complaint.jsp" method="post">
+        <h3 id="heading1">COMPLAINT DETAILS</h3><br>
+        <div class="inside_form">
+            <center><h3>ADD DETAILS</h3></center>
+            <br>
+            <label>   
+                Category Type :  
+                </label>   
+                <select name="category"> 
+                <option value="">Select</option> 
+                <option value="1">Abuse</option>  
+                <option value="2">Stripping</option>  
+                <option value="3">Forcing obscene</option>    
+                <option value="4">Bullying</option>  
+                <option value="5">Eve Harrasment</option>   
+                </select>
+                <br><br>  
+
+                    <label>Risk :</label>
+                    <br>
+                    <input type="number" min="1" max="5" name="Risk" id="RISK" placeholder="Enter the risk factor range 1 - 5" >
+                    <br><br>
+                    <label>Location : </label>
+                    <br>
+                    <input type="text" name="Location" id="Location" placeholder="Enter Your Location">
+                    <br><br>
+            <label for="Complanit Date">Complaint Date:</label>
+                
+                <input type="date" id="complaint" name="ComplaintDate">
+                <br><br>
+
+                     <label>Description :</label>
+                    <br><br>
+                    <textarea cols="70" rows="5" value="Action Report" name="Description" ></textarea>
+                    <br><br>
+                    <input type="reset">
+
+                    <input type="submit" value="submit">
+        </div>
+    </form>
+        
+        <script>
+          document.getElementById('COMPform').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent form submission
+
+  
+  var category = document.forms['COMPform']['category'].value;
+  var risk = document.forms['COMPform']['Risk'].value;
+  var location = document.forms['COMPform']['Location'].value;
+  var complaintDate = document.forms['COMPform']['ComplaintDate'].value;
+  var description = document.forms['COMPform']['Description'].value;
+
+  
+  if (category === '') {
+    alert('Please select a Category');
+    return false;
+  }
+
+  
+  if (risk === '' || risk < 1 || risk > 5) {
+    alert('Please enter a valid Risk factor (1-5)');
+    return false;
+  }
+
+  
+  if (location === '') {
+    alert('Please enter a Location');
+    return false;
+  }
+
+
+  if (complaintDate === '') {
+    alert('Please enter a Complaint Date');
+    return false;
+  }
+
+  
+  if (description === '') {
+    alert('Please enter a Description');
+    return false;
+  }
+
+  alert('Form submitted successfully');
+//  document.getElementById('COMPform').reset();
+//  window.location.replace("code4.html");
+  
+  document.forms[0].action = "complaint.jsp";
+  document.forms[0].method = "post"; // "get"
+  document.forms[0].submit();
+
+});
+
+        </script>
+</body>
+</html>

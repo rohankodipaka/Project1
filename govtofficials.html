@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTI-RAGGING</title>
+    <link rel="icon" type="image/x-icon" href="/Screenshot 2023-05-07 130739.png">
+    <style>
+        #GOVform{
+          background-color: black;
+       padding: 100px;
+       width:auto;
+       color: black;
+       font-family:Arial, Helvetica, sans-serif;
+       font-size: 18px;
+      
+      }
+  #heading1{
+    color: white;
+    word-spacing: 5px;
+    letter-spacing: 1.5px;
+    border: none;
+    border-bottom: 2px solid #F0131E;
+    border-bottom-width: 3px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+
+      }
+input[type=text],input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1.7px solid black;
+  padding-bottom: 8px;
+  background-color: lightyellow;
+  }
+
+input[type=date] {
+width: fit-content;
+padding: 12px 20px;
+margin: 10px 0;
+border: 1px solid black;
+cursor: pointer;
+}
+input[type=tel] {
+width: 100%;
+padding: 12px 20px;
+margin: 10px 0;
+border: 1.7px solid black;
+background-color: lightyellow;
+}
+button[type=button] {
+
+padding: 8px 20px;
+margin: 20px 0;
+box-sizing: border-box;
+border: 1px solid black;
+background-color: lightyellow;
+cursor: pointer;
+}
+input[type=reset] {
+box-sizing: border-box;
+border: 1px solid black;
+background-color:black;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+cursor: pointer;
+float: left;
+}
+input[type=submit] {
+box-sizing: border-box;
+border: 1px solid black;
+background-color:royalblue;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+cursor: pointer;
+float: right;
+}
+
+
+select {
+width: fit-content;
+padding: 10px 20px;
+border: none;
+border-radius: 4px;
+background-color: #f1f1f1;
+}
+.inside_form{
+  background-color: white;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  padding: 0px 80px 80px 40px;
+ 
+}
+center >h3{
+border: none;
+    border-bottom: 2px solid black;
+    border-bottom-width: 3px;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+  </style>
+</head>
+<body>
+    <form id="GOVform" action="govt.jsp" method="post">
+        <h3 id="heading1">GOVERNMENT OFFICIAL</h3><br>
+          <div class="inside_form">
+          <center><h3>ADD DETAILS</h3></center>
+          <br>
+          <label> Profession : </label>
+                    <br>
+                    <input type="text" name="Designation" id="Designation" placeholder="Enter Your designation">
+                    <br><br>
+                    <label>Offical ID : </lab>
+                    <br>
+                    <input type="text" name="id" id="Official id" placeholder="Enter Your ID number">
+                    <br><br>
+                    <label>Email : </label>
+                    <br>
+                    <input type="email" name="email" id="name" placeholder="Enter Your  Email">
+                    <br><br>
+                    <label>Mobile : </label>
+                    <br>
+                    <input type="tel" name="mobile" pattern="[0-9]{10}"><br>
+                    <br><br>
+                    <input type="reset">
+
+                    <input type="submit" value="submit">
+        </div>
+    </form>
+
+    <script>
+
+document.getElementById('GOVform').addEventListener('submit', function(event) {
+         event.preventDefault(); // Prevent form submission
+
+        var designation = document.forms["GOVform"]["Designation"].value;
+        var id = document.forms["GOVform"]["id"].value;
+        var email = document.forms["GOVform"]["email"].value;
+        var mobile = document.forms["GOVform"]["mobile"].value;
+        
+        if (designation === "") {
+            alert("Please enter your designation");
+            return false;
+        }
+        
+        if (id === "") {
+            alert("Please enter your official ID");
+            return false;
+        }
+        
+        if (email === "") {
+            alert("Please enter your email");
+            return false;
+        }
+        
+        // Check mobile number format
+        var mobileRegex = /^[0-9]{10}$/;
+        if (!mobileRegex.test(mobile)) {
+            alert("Please enter a valid 10-digit mobile number");
+            return false;
+        }
+
+        alert('Form submitted successfully');
+ // document.getElementById('GOVform').reset();
+//  window.location.replace("code4.html");
+
+        document.forms[0].action = "govt.jsp";
+        document.forms[0].method = "post"; // "get"
+        document.forms[0].submit();
+  
+
+
+});
+
+    </script>
+
+</body>
+</html>

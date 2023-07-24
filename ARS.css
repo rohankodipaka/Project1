@@ -1,0 +1,302 @@
+body{
+    background-color: white;
+    margin: 0;
+   }
+
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  nav {
+    overflow: hidden;
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+
+    border: 1px solid black;
+    justify-content: space-between;
+    }
+
+    .links {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    color:white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 25px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    }
+
+    nav .logo {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #F0131E;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    }
+
+    nav .links:hover {
+    background-color: #F0131E;
+    }
+
+    nav .logo:hover {
+      background-color: black;
+      cursor: auto;
+      }
+
+    .rightSection {
+    float: right;
+    }
+
+    @media screen and (max-width: 870px) {
+    nav .links {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+
+    .rightSection {
+    float: none;
+    }
+
+    .mixed {
+      flex-direction: column;
+    }
+    
+    .pic_content,
+    .text_content {
+      flex: auto;
+    }
+
+    }
+
+
+.img1{
+  background: url('anti-ragging-committee.jpg');
+
+  /* width: 100%; */
+}
+.division1{
+  margin-top: 110px;
+  background-color: white;
+  height:1000px;
+}
+
+/* 
+footer css */
+
+#footer {
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+
+.inside_footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_section {
+  flex: 1 1 300px;
+  margin-right: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section_title {
+  color: white;
+  border: none;
+  border-bottom: 2px solid #F0131E;
+  border-bottom-width: 3px;
+  padding-bottom: 3px;
+  width:fit-content;
+}
+
+.mylist {
+  list-style-type: none;
+  padding: 0;
+  margin-top:20px ;
+  line-height: 30px;
+}
+
+.mylist li {
+  margin-bottom: 10px;
+  
+}
+
+li a{
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover{
+  color: #F0131E;
+}
+
+.contact_info {
+  margin-top: 10px;
+  margin-top:20px ;
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .inside_footer {
+    flex-direction: column;
+  }
+  
+  .footer_section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* body css */
+
+body,html{
+  height: 100%;
+}
+
+
+
+.mixed {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #272727;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  padding: 20px;
+  margin:100px;
+}
+
+.pic_content {
+  flex: 1 0 50%;
+  
+}
+
+.pic_content img {
+  max-width: 75%;
+  height: auto;
+}
+
+.text_content {
+  flex: 1 0 50%;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+
+}
+
+
+/* part2 */
+
+.who_are_we{
+  background: black;
+  width: autos;
+  margin-top: 140px;
+
+}
+
+center >h2{
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+border: 3px solid #F0131E;
+border-top-style: none;
+border-right-color: #000000;
+width: 300px;
+padding: 20px;
+margin-top: 50px;
+}
+
+.para{
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 50px;
+  letter-spacing: 2.5px;
+  word-spacing: 1.5px;
+  line-height: 2.5;
+  
+}
+
+/* part3 */
+
+#Track{
+  margin-top: 140px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 3px solid #F0131E;
+  border-top-style: none;
+  border-left-color: white;
+  border-right-color: white;
+  padding-bottom: 10px;
+  width: fit-content;
+  padding: 8px;
+
+}
+.status{
+  text-align: center;
+  padding: 50px;
+  border: none;
+  
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+input[type=text]{
+  padding: 10px;
+  width: 45%;
+  letter-spacing: 1.5px;
+  background-color: lightyellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input[type=submit]{
+  background-color: #F0131E;
+  padding: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* part4 */
+
+
+#information{
+  margin-top: 150px;
+}
+.some_points{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 3px solid #F0131E;
+  border-top-style: none;
+  border-left-color: #f2f2f2;
+  border-right-color: #f2f2f2;
+  padding-bottom: 5px; */
+  width: fit-content;
+}
+
+.adjust{
+padding: 30px;
+background-color:#f2f2f2;
+margin-bottom: 60px;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.points{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  line-height: 2.5;
+}
+
